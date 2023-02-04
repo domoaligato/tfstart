@@ -16,7 +16,7 @@ To get started with this repo...
 1. `git clone https://github.com/domoaligato/tfstart.git`
 
 1. Run Setup.ps1 (not in pwsh ise)
-
+1. `cd .\tfstart`
 1. Install the offical vscode extensions below
 >*  Azure Resource Manager
 >*  Azure Terraform
