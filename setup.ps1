@@ -29,7 +29,7 @@ If ($notPresent){
     $notPresent = $null
 }
 
-Get-AzStorageContainer -ResourceGroupName $RESOURCE_GROUP_NAME -Name $CONTAINER_NAME -ErrorVariable notPresent -ErrorAction SilentlyContinue
+Get-AzStorageContainer -Name $CONTAINER_NAME -ErrorVariable notPresent -ErrorAction SilentlyContinue
 If ($notPresent){
     New-AzStorageContainer -Name $CONTAINER_NAME -Context $storageAccount.context -Permission blob
     $notPresent = $null
