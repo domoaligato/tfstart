@@ -12,11 +12,15 @@ To get started with this repo...
     ```powershell
     New-Item -Path ([Environment]::GetFolderPath("MyDocuments")) -Name "code" -ItemType "directory"
     cd ([Environment]::GetFolderPath("MyDocuments"))
-    cd .\code\```
-1. `git clone https://github.com/domoaligato/tfstart.git`
+    cd .\code\
+    ```
+1. ```powershell
+   git clone https://github.com/domoaligato/tfstart.git
+   cd .\tfstart
+   ```
 
 1. Run Setup.ps1 (not in pwsh ise)
-1. `cd .\tfstart`
+
 1. Install the offical vscode extensions below
 >*  Azure Resource Manager
 >*  Azure Terraform
