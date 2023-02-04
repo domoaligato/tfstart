@@ -26,6 +26,10 @@ If ($notPresent){
     $storageAccount = New-AzStorageAccount -ResourceGroupName $RESOURCE_GROUP_NAME -Name $STORAGE_ACCOUNT_NAME -SkuName Standard_LRS -Location $LOCATION -AllowBlobPublicAccess $true
     $notPresent = $null
 }
+$storageCtx = New-AzStorageContext -StorageAccountName $STORAGE_ACCOUNT_NAME -UseConnectedAccount
+
+(Invoke-WebRequest -uri "http://ifconfig.me/ip").Content
+
 
 Get-AzStorageContainer -Name $CONTAINER_NAME -Context $storageAccount.context -ErrorVariable notPresent -ErrorAction SilentlyContinue
 If ($notPresent){
